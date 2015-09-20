@@ -57,7 +57,7 @@ return [
             'host'      => env('DB_HOST', '127.0.0.1:8000'),
             'database'  => env('DB_DATABASE', 'forge'),
             'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', 'dba7j9gh8H7USqKVTyLA'),
+            'password'  => env('DB_PASSWORD', 'omx6DZ2eBwbI88shcUDz'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
