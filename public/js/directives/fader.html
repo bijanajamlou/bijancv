@@ -1,0 +1,26 @@
+<div class="fader">
+	<ul>
+		<li id="slideContainer" ng-repeat="slide in slides" ng-click="toggleStartStop()" ng-swipe-right="sliderBack()" ng-swipe-left="sliderForward()"><img data-ng-src="{{slide.url}}" data-ng-alt="{{slide.desc}}" ng-class="show($index)"/></li> 
+ 	</ul> 
+ 	<div class="fader-pagination"> 
+ 		<ul> 
+ 			<li ng-repeat="i in dots(numberOfslides) track by $index" ng-class="{current: selectedImage==$index}" ng-click="setSelected($index)"></li> 
+ 		</ul> 
+ 	</div> 
+ 	<div class="fader-controls"> 
+ 		<ul> 
+ 			<li ng-click="sliderBack()"> 
+ 				<i class="faderC-back"></i> 
+ 			</li> 
+ 			<li ng-click="stopSlider()"> 
+ 				<i class="faderC-pause" ></i> 
+ 			</li> 
+ 			<li ng-click="startSlider()"> 
+ 				<i class="faderC-play"  ></i> 
+ 			</li> 
+ 			<li ng-click="sliderForward()"> 
+ 				<i class="faderC-forward"></i> 
+ 			</li> 
+ 		</ul> 
+ 	</div>
+</div>

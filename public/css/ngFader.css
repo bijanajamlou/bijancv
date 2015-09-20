@@ -1,0 +1,208 @@
+*{
+font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+text-align: center;
+padding: 10px;
+font-size: 40px;
+color: #222;
+}
+
+.fader {
+    background-color: #000;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 22
+}
+.fader ul {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+.fader li {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    width: 100%
+}
+.fader li img {
+    border: medium none;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: opacity 1s ease 0s;
+    -moz-transition: opacity 1s ease 0s;
+    -o-transition: opacity 1s ease 0s;
+    transition: opacity 1s ease 0s;
+}
+.fader li img.show {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.fader-pagination {
+    bottom: 10px;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: auto
+}
+.fader-pagination li {
+    background-color: #00BF02;
+    border-radius: 10px;
+    display: inline-block;
+    height: 12px;
+    margin: 4px;
+    padding: 5px;
+    position: relative;
+    width: 12px;
+    cursor: pointer
+}
+.fader-pagination li:first-child {
+    margin: 4px 4px 4px 20px;
+}
+.fader-pagination li.current {
+    background-color: #666
+}
+.fader-controls {
+    bottom: 10px;
+    height: 20px;
+    position: absolute;
+    right: 20px
+}
+.fader-controls li {
+    color: #00BF02;
+    display: inline;
+    font-size: 1.2em;
+    padding: 0 15px;
+    position: relative;
+    cursor: pointer
+}
+.fader-controls li:nth-child(3) {
+    padding-right: 0
+}
+.fader-controls li.active {
+    color: #666
+}
+.faderC-play {
+    width: 0;
+    height: 0;
+    margin: 0;
+    display: inline-block;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #00BF02;
+    cursor: pointer
+}
+.faderC-play.active {
+    border-left: 15px solid #666
+}
+.faderC-stop {
+    background-color: #00BF02;
+    height: 15px;
+    margin: 0;
+    display: inline-block;
+    width: 15px;
+    cursor: pointer
+}
+.faderC-stop.active {
+    background-color: #666
+}
+.faderC-pause {
+    background-color: #00BF02;
+    height: 15px;
+    margin: 0;
+    width: 5px;
+    cursor: pointer;
+    display: inline-block
+}
+.faderC-pause:after {
+    background-color: #00BF02;
+    height: 15px;
+    margin-left: 3px;
+    width: 5px;
+    content: "";
+    display: block;
+    position: relative;
+    left: 5px
+}
+.faderC-pause.active,
+.faderC-pause.active:after {
+    background-color: #666
+}
+.faderC-forward {
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #00BF02;
+    border-top: 8px solid transparent;
+    height: 0;
+    margin: 0;
+    width: 0;
+    cursor: pointer;
+    display: inline-block
+}
+.faderC-forward:after {
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #00BF02;
+    border-top: 8px solid transparent;
+    bottom: 8px;
+    content: "";
+    display: block;
+    height: 0;
+    margin: 0;
+    position: relative;
+    right: 0;
+    width: 0
+}
+.faderC-forward.active,
+.faderC-forward.active:after {
+    border-left: 8px solid #666
+}
+.faderC-back {
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #00BF02;
+    border-top: 8px solid transparent;
+    height: 0;
+    margin: 0;
+    width: 0;
+    cursor: pointer;
+    display: inline-block
+}
+.faderC-back:after {
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #00BF02;
+    border-top: 8px solid transparent;
+    bottom: 8px;
+    content: "";
+    display: block;
+    height: 0;
+    position: relative;
+    left: 8px;
+    width: 0
+}
+.faderC-back.active,
+.faderC-back.active:after {
+    border-right: 8px solid #666
+}
+
+@media screen and (max-width: 740px) {
+    .fader-controls {
+        display: none
+    }
+    .fader-pagination {
+    	bottom: 0;
+    }
+    .fader-pagination li {
+    	width: 6px;
+    	height: 6px;
+    }
+    .fader-pagination li:first-child {
+    	margin: 4px;
+    }
+}
+
