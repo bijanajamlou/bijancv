@@ -78,6 +78,8 @@ app.directive('fader', function ($interval) {
         		return "show";
         	}
         };
+
+
          //var image = angular.element($document.getElementById('slideContainer'));
         //var image = $('.slideContainer', element)
         // var image = element.children('#slideContainer');

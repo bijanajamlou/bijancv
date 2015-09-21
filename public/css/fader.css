@@ -9,39 +9,35 @@ font-size: 40px;
 color: #222;
 }
 
-.fader li div h3{
+.fader-meta div h3{
     position: absolute;
-text-align: center;
-padding: 10px;
-font-size: 20px;
-color: #999999;
-opacity: 0;
+    text-align: center;
+    font-size: 0px;
+    color: #999999;
+    opacity: 0;
 }
-.fader li div h4{
+.fader-meta div h4{
     position: absolute;
-text-align: center;
-
-font-size: 10px;
-color: #999999;
-opacity: 0;
+    text-align: center;
+    font-size: 0px;
+    color: #999999;
+    opacity: 0;
 
 }
 
-.fader li div h3.show{
+.fader-meta div h3.show{
     position: relative;
-text-align: center;
-padding: 10px;
-font-size: 20px;
-color: #999999;
-opacity: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #999999;
+    opacity: 1;
 }
-.fader li div h4.show{
+.fader-meta div h4.show{
     position: relative;
-text-align: center;
-
-font-size: 10px;
-color: #999999;
-opacity: 1;
+    text-align: center;
+    font-size: 10px;
+    color: #999999;
+    opacity: 1;
 }
 
 
@@ -50,7 +46,6 @@ opacity: 1;
     position: relative;
     padding: 0;
     margin: 0;
-
     z-index: 22
 }
 .fader ul {
@@ -65,7 +60,7 @@ opacity: 1;
     list-style: none;
     width: 100%
 }
-.fader li img {
+.fader li div img {
     border: medium none;
     margin: 0;
     width: 0;
@@ -77,7 +72,7 @@ opacity: 1;
     -o-transition: opacity 1s ease 0s;
     transition: opacity 1s ease 0s;
 }
-.fader li img.show {
+.fader li div img.show {
     opacity: 1;
     width: 100%;
     height: auto;
