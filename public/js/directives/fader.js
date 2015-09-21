@@ -36,16 +36,6 @@ app.directive('fader', function ($interval) {
         scope.sliderForward = function() {
           scope.stopSlider();
           scope.autoSlider();
-          //var fader = scope.find('.fader');
-          // TweenMax.to(element, .4, {
-          //       scale: '1.1',
-          //       ease: Quad.
-          //   });
-            // TweenMax.to(element, .4, {
-            //     scale: '1.2',
-            //     color: 'white',
-            //     rotation: 720
-            // });
         };
 
         scope.autoSlider = function (){
@@ -79,7 +69,7 @@ app.directive('fader', function ($interval) {
         	}
         };
 
-
+        //work in progress to add animation using Tweenmax
          //var image = angular.element($document.getElementById('slideContainer'));
         //var image = $('.slideContainer', element)
         // var image = element.children('#slideContainer');
