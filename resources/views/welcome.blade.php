@@ -6,7 +6,7 @@
     <link href="css/main.css" rel="stylesheet" />
     -->
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <link href='css/ngFader.css' rel='stylesheet' type='text/css'>
+    <link href='css/fader.css' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/angular-route.min.js"></script>

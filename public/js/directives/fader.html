@@ -1,6 +1,17 @@
 <div class="fader">
 	<ul>
-		<li id="slideContainer" ng-repeat="slide in slides" ng-click="toggleStartStop()" ng-swipe-right="sliderBack()" ng-swipe-left="sliderForward()"><img data-ng-src="{{slide.url}}" data-ng-alt="{{slide.desc}}" ng-class="show($index)"/></li> 
+		<li id="slideContainer" ng-repeat="slide in slides" ng-click="toggleStartStop()" ng-swipe-right="sliderBack()" ng-swipe-left="sliderForward()">
+			<div> 
+				<img data-ng-src="{{slide.url}}" data-ng-alt="{{slide.desc}}" ng-class="show($index)"/> 
+			
+				<div>
+					<h3 ng-class="show($index)">{{slide.title}}</h3>
+				</div>
+				<div>
+					<h4 ng-class="show($index)">{{slide.desc}}</h4>
+				</div>
+			</div>
+		</li> 
  	</ul> 
  	<div class="fader-pagination"> 
  		<ul> 
@@ -23,4 +34,6 @@
  			</li> 
  		</ul> 
  	</div>
+
+
 </div>
