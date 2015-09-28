@@ -1,0 +1,217 @@
+@mixin item-transition($value) {
+  -webkit-transition: transform $value;
+     -moz-transition: transform $value;
+      -ms-transition: transform $value;
+          transition: transform $value;
+}
+
+@mixin font-face($url, $fontFamilyName) {
+  font-family: $fontFamilyName;
+  src: url($url+'.eot'); 
+  src: url($url+'.woff2') format('woff2'), 
+       url($url+'.woff') format('woff'), 
+       url($url+'.ttf')  format('truetype'),
+       url($url+'.svg') format('svg'); 
+}
+
+
+@font-face { @include font-face('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular', 'ProximaNovaRegular');}
+
+@font-face { @include font-face('../fonts/ProximaNovaT/Thin/ProximaNovaT-Thin', 'ProximaNovaThin');}
+
+@font-face { @include font-face('../fonts/ProximaNovaT/ThinItalic/ProximaNova-ThinIt', 'ProximaNovaThinLight');}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+* {
+  font-family: 'ProximaNovaThin', Fallback, Arial;
+}
+
+h1	{
+	    font-family: 'ProximaNovaThin', Fallback, Arial;
+	    text-align: center;
+	    padding: 10px;
+	    font-size: 40px;
+	    color: #222;
+	}
+h2	{
+		font-family: 'ProximaNovaThin', Fallback, Arial;
+		font-size: 50px;
+		color: #222;
+		font-weight: normal;
+	}
+h3	{
+		font-family: 'ProximaNovaThin', Fallback, Arial;
+		font-size: 35px;
+		color: #72893D;
+		font-weight: normal;
+	}
+
+.row {
+    background-color: #F3F4F5;
+
+}
+
+
+.btn-custom {
+  background-color: #72893D;
+  border-color: #72893D;
+  color: #FFFFFF;
+    outline: none;
+  box-shadow: none;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #637735;
+  border-color: #55662d;
+  color: #FFFFFF;
+    outline: none;
+  box-shadow: none;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #72893D;
+  border-color: #72893D;
+  color: #FFFFFF;
+  outline: none;
+  box-shadow: none;
+}
+
+// .btn-custom:focus {
+//     outline: none;
+//     box-shadow: none;
+// }
+
+
+.nav-tabs {
+
+	li {
+	  color: #72893D;
+	}
+
+
+	li.active > a,
+	li.active > a:hover,
+	li.active > a:focus {
+	  background-color: #F3F4F5;
+	  color: #72893D;
+	}
+}
+
+
+.carousel.flip {
+	opacity: 1;
+	perspective: 800px;
+
+	.item {
+
+	    perspective-origin: center center;
+	    transform-style: preserve-3d;
+	    transform: rotateY( 180deg );
+	    @include item-transition(.3s);
+	    backface-visibility: hidden;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    display: block;
+	    position: absolute;
+	    opacity: 1;
+	}
+
+	.item:first-child {
+	    top:auto;
+	    position:relative;
+	}
+
+	.item.active {
+	    transform-style: preserve-3d;
+	    perspective-origin: center center;
+	    transform: rotateY( 0deg );
+	    @include item-transition(.3s);
+	    backface-visibility: hidden;
+
+	    opacity: 1;
+	}
+
+	///
+
+
+	.carousel-control{
+		.left, 
+		.right {
+				background: none;
+				color: #FF0000;
+				border: none;
+			}
+		.left {
+			margin-left: -45px; color: #0;
+		}
+		.right {margin-right: -45px; color: #0;
+		}
+
+		.glyphicon-chevron-right{
+			color: #72893D;
+		}
+		.glyphicon-chevron-left{
+			color: #72893D;
+		}
+
+
+
+	   
+	}
+	.carousel-caption  {
+
+		h4{
+			color: #72893D;
+			font-family: 'ProximaNovaRegular', Fallback, Arial;
+			font-size: 22px;
+		}
+
+		p{
+			color: #72893D;
+			font-family: 'ProximaNovaRegular', Fallback, Arial;
+			font-size: 16px;
+		}
+        
+    }
+
+	.carousel-indicators	{ 
+
+		display: inline-block;
+
+	  	.active {
+            background-color: #72893D;
+            height: 22px;
+            margin: 0;
+            width: 22px;
+	    }
+
+	  	li  {
+	        background-color: #000 \9;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid #72893D;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-block;
+            height: 20px;
+            margin: 1px;
+            padding: 5;
+            text-indent: -999px;
+            width: 20px;
+		}
+	} 
+}  
+

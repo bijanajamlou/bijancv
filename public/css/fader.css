@@ -1,16 +1,156 @@
-*{
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.carousel.flip {
+opacity: 1;
+perspective: 800px;
+}
+.carousel.flip .item {
+
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    transform: rotateY( 180deg );
+    transition: transform .3s;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    opacity: 1;
+}
+.carousel.flip .item:first-child {
+    top:auto;
+    position:relative;
+}
+.carousel.flip .item.active {
+    transform-style: preserve-3d;
+    perspective-origin: center center;
+    transform: rotateY( 0deg );
+    transition: transform .3s;
+    backface-visibility: hidden;
+
+    opacity: 1;
+}
+
+
+/**{
 font-family: 'Open Sans', sans-serif;
+}*/
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular.eot'); 
+  src: url('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular.woff2') format('woff2'), 
+       url('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular.woff') format('woff'), 
+       url('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular.ttf')  format('truetype'),
+       url('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular.svg') format('svg'); 
+}
+@font-face {
+  font-family: 'ProximaNovaThin';
+  src: url('../fonts/ProximaNovaT/Thin/ProximaNovaT-Thin.eot'); 
+  src: url('../fonts/ProximaNovaT/Thin/ProximaNovaT-Thin.woff2') format('woff2'), 
+       url('../fonts/ProximaNovaT/Thin/ProximaNovaT-Thin.woff') format('woff'), 
+       url('../fonts/ProximaNovaT/Thin/ProximaNovaT-Thin.ttf')  format('truetype'), 
+       url('../fonts/ProximaNovaT/Thin/ProximaNovaT-Thin.svg') format('svg'); 
+}
+@font-face {
+  font-family: 'ProximaNovaThinLight';
+  src: url('../fonts/ProximaNovaT/ThinItalic/ProximaNova-ThinIt.eot'); 
+  src: url('../fonts/ProximaNovaT/ThinItalic/ProximaNova-ThinIt.woff2') format('woff2'), 
+       url('../fonts/ProximaNovaT/ThinItalic/ProximaNova-ThinIt.woff') format('woff'), 
+       url('../fonts/ProximaNovaT/ThinItalic/ProximaNova-ThinIt.ttf')  format('truetype'), 
+       url('../fonts/ProximaNovaT/ThinItalic/ProximaNova-ThinIt.svg') format('svg'); 
 }
 
+
+* {
+  font-family: 'ProximaNovaThin', Fallback, Arial;
+}
+
+.nav-tabs.nav-justified > li {
+  padding-bottom: 0 !important;
+}
+.nav-tabs.nav-justified > li > a {
+  margin-left: 2px ;
+  top: 1px;
+  border: none;
+}
+.nav-tabs.nav-justified > li:first-child > a {
+  margin-left: 0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: #F3F4F5;
+}
+}
+.row {
+    /*background-color: #F3F4F5;*/
+}
+.italic-text {
+    font-family: 'ProximaNovaThinLight', Fallback, Arial;
+    font-style: italic;
+}
+.regular-text {
+    font-family: 'ProximaNovaRegular', Fallback, Arial;
+    font-style: normal;
+}
+.thin-text {
+    font-family: 'ProximaNovaThin', Fallback, Arial;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.col-md-4 {
+    background-color: #F3F4F5;
+    height: 1000px;
+    padding:0;
+
+}
+.col-md-5 {
+   /* padding:0;*/
+    /*max-height: 220px;*/
+   /* background-color: #00FF00;*/
+}
+.col-md-6 {
+    /*height: 1000px;*/
+   /* padding:0;*/
+   /* background-color: #FF0000;*/
+}
+.col-md-7 {
+    /*padding:5;*/
+    /*max-height: 220px;*/
+   /* background-color: #0000FF;*/
+}
+.col-md-8 {
+    padding:0;
+    background-color: #FFFFFF;
+
+}
+.textContainer {
+   /* padding: 20px;*/
+
+}
 h1{
-text-align: center;
-padding: 10px;
-font-size: 40px;
-color: #222;
+    font-family: 'ProximaNovaThin', Fallback, Arial;
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    color: #222;
 }
-
-
-.fader-meta div h3{
+h2{
+font-family: 'ProximaNovaThin', Fallback, Arial;
+font-size: 50px;
+color: #222;
+font-weight: normal;
+}
+h3{
+font-family: 'ProximaNovaThin', Fallback, Arial;
+font-size: 35px;
+color: #72893D;
+font-weight: normal;
+}
+/*.fader-meta div h3{
     position: absolute;
     text-align: center;
     font-size: 0px;
@@ -253,3 +393,4 @@ color: #222;
 
 }
 
+*/

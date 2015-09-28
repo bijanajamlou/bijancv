@@ -1,0 +1,186 @@
+*{
+font-family: 'Open Sans', sans-serif;
+}
+
+.slider{
+    position: relative;
+    padding:5px;
+    margin: auto;
+    margin-top: 40px;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0px 0px 15px #999;
+}
+.slide{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  width: 50%;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 800px) {
+    .slider{
+        position: relative;
+        padding:5px;
+        margin: 0px 40px 0px 0px ;
+        width: 100%;
+        height: 400px;
+        box-shadow: 0px 0px 15px #999;
+    }
+    .slide{
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      width: 100%;
+      margin-left: 10%;
+
+    }
+}
+
+.arrows{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.arrows img{
+    height: 32px;
+}
+
+h1{
+text-align: center;
+padding: 10px;
+font-size: 40px;
+color: #222;
+}
+ 
+.slide.ng-hide-add, .slide.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+ 
+.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
+  opacity:0;
+}
+ 
+.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+
+/*---------------------------------------------------------
+Slider
+---------------------------------------------------------*/
+
+.arrow {
+    position: absolute;
+    z-index: 1002;
+    display: block;
+    top: 50%;
+    margin-top: -35px;
+    width: 36px;
+    height: 71px;
+    outline: none;
+    cursor: pointer;
+    background: url(../assets/img/blank.gif) no-repeat;
+}
+
+.arrow.prev {
+    opacity: 0.2;
+    left: 20px;
+    background-image: url(../assets/img/paddle_prev_999.png);
+    transition: 0.2s linear all;
+}
+
+.arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    background-image: url(../assets/img/paddle_next_999.png);
+    transition: 0.2s linear all;
+}
+
+.arrow.prev:hover {
+    opacity: 1;
+    background-image: url(../assets/img/paddle_prev_fff.png);
+}
+
+.arrow.next:hover {
+    opacity: 1;
+    background-image: url(../assets/img/paddle_next_fff.png);
+}
+
+
+/*---------------------------------------------------------
+NAV
+---------------------------------------------------------*/
+
+.nav {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 48px;
+}
+
+.nonDraggableImage{
+    -webkit-user-drag: none;
+}
+
+.nav .wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em 0 .8em;
+}
+
+.nav ul {
+    margin: 0;
+    width: 100%;
+}
+
+.nav .dot, .nav .dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.dots .dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+}
+
+.dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #CCCCCC;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.dots .dot a.active {
+    border-color: #999999;
+    background-color: transparent;
+}
