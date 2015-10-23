@@ -1,0 +1,13 @@
+﻿<div class="board clearfix">
+	<div class="row">
+        <div class="col-md-12">
+
+        	<div class="game-info">
+        		<button ng-click="tooglePlay()" class="btn btn-custom">Reset</button>
+				<div class="score">{{gameInfo.clicks}} / {{gameInfo.score}}</div>
+			</div>
+        	
+        </div>
+    </div>
+	<div ng-transclude></div>
+</div>

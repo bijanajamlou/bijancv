@@ -21,3 +21,7 @@
 
 Route::get('/about', 'PagesController@about');
 Route::get('/slides', 'SlidesController@index');
+Route::get('/colors', 'ColorsController@index');
+Route::get('/searchImage/{searchString}', 'SearchImageController@searchImage');
+Route::get('/searchImageGoogleWebAPI/{searchString}', 'SearchImageController@searchImageGoogleWebAPI');
+

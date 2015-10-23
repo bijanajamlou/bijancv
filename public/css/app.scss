@@ -14,6 +14,153 @@
        url($url+'.svg') format('svg'); 
 }
 
+.memory-game {
+    margin-top:40px;
+
+    .game-info {
+        .score {
+            text-align:center;
+            font-size:22px;
+        }
+    }
+
+    .card {
+        cursor:pointer;
+        background:url("../img/cardback.png") no-repeat;
+        background-size:cover;
+        box-shadow:0 0 10px 0 #aaa;
+        border-radius:10px;
+        height:160px;
+        width:120px;
+        border:1px solid #ccc;
+        float:left;
+        margin-right:20px;
+        margin-top:20px;
+
+        cursor : pointer;
+		        transform-style: preserve-3d;
+		    -ms-transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		        transition: 0.3s;
+	    -webkit-transition: 0.3s;
+
+		.face {
+		          backface-visibility: hidden;
+		    -webkit-backface-visibility: hidden;
+		    position: absolute;
+		    z-index: 2;
+		}
+		.front {
+		    position: absolute;
+		    z-index: 1;
+		}
+		.back {
+			        transform: rotatex(-180deg);
+			    -ms-transform: rotatex(-180deg);
+		    -webkit-transform: rotatex(-180deg);
+		    //margin: -5px;
+		    border-radius:10px;
+		    width: 100%;
+		    height: 100%;
+		    background-color: hsl(150, 80%, 40%);
+		    backface-visibility: hidden;
+		}
+
+
+        &.true {
+           //background:#eee;
+           backface-visibility: hidden;
+           cursor:default;
+
+            transform: rotatex(180deg);
+			    -ms-transform: rotatex(180deg);
+		    -webkit-transform: rotatex(180deg);
+
+
+
+        }
+
+        .content {
+            font-size: 36px;
+            margin: 42% auto;
+            text-align: center;
+        }
+        &:hover {
+			background-color: hsl(150, 80%, 40%);
+		    background: 
+		    /* top, transparent red */ 
+		        linear-gradient(
+		      rgba(227, 254, 255, 0.15), 
+		      rgba(183, 246, 249, 0.15)
+		    ),
+		    /* bottom, image */
+		    url("../img/cardback.png") no-repeat;
+		    background-size:cover;
+	        box-shadow:0 0 10px 0 #aaa;
+	        border-radius:10px;
+	        height:160px;
+	        width:120px;
+	        border:1px solid #ccc;
+	        float:left;
+	        margin-right:20px;
+	        margin-top:20px;
+		}
+    }
+}
+
+.navbar {
+
+	padding:0;
+
+	margin-bottom:0px;
+	
+	.nav {
+
+		>li {
+			>a 	{
+
+				    font-weight: bold;
+				}
+		}
+
+
+	}
+	.navbar-header{
+		padding-left:27px;
+		padding-bottom:1px;
+		.navbar-brand{
+			>img {
+				padding:0;
+			}
+		}		
+	}
+
+
+}
+
+.navbarHover{
+	fill: #FFFFFF;
+	bottom:0px;
+	padding:0;
+	width:25px;
+	height:25px;
+	position:absolute;
+}
+
+.site-container{
+	fill: #FFFFFF;
+	padding:0;
+
+}
+
+.site-container{
+	fill: #FFFFFF;
+	padding:0;
+
+}
+
+
+
 
 @font-face { @include font-face('../fonts/ProximaNovaT/Regular/ProximaNovaS-Regular', 'ProximaNovaRegular');}
 
@@ -48,9 +195,11 @@ h3	{
 	}
 
 .row {
-    background-color: #F3F4F5;
+    //background-color: #F3F4F5;
 
 }
+
+
 
 
 .btn-custom {
@@ -112,37 +261,37 @@ fieldset[disabled] .btn-custom.active {
 
 
 .carousel.flip {
-	opacity: 1;
-	perspective: 800px;
+	// opacity: 1;
+	// perspective: 800px;
 
 	.item {
 
-	    perspective-origin: center center;
-	    transform-style: preserve-3d;
-	    transform: rotateY( 180deg );
-	    @include item-transition(.3s);
-	    backface-visibility: hidden;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    display: block;
-	    position: absolute;
-	    opacity: 1;
+	    // perspective-origin: center center;
+	    // transform-style: preserve-3d;
+	    // transform: rotateY( 180deg );
+	    // @include item-transition(.3s);
+	    // backface-visibility: hidden;
+	    // top: 0;
+	    // left: 0;
+	    // width: 100%;
+	    // display: block;
+	    // position: absolute;
+	    // opacity: 1;
 	}
 
 	.item:first-child {
-	    top:auto;
-	    position:relative;
+	    // top:auto;
+	    // position:relative;
 	}
 
 	.item.active {
-	    transform-style: preserve-3d;
-	    perspective-origin: center center;
-	    transform: rotateY( 0deg );
-	    @include item-transition(.3s);
-	    backface-visibility: hidden;
+	    // transform-style: preserve-3d;
+	    // perspective-origin: center center;
+	    // transform: rotateY( 0deg );
+	    // @include item-transition(.3s);
+	    // backface-visibility: hidden;
 
-	    opacity: 1;
+	    // opacity: 1;
 	}
 
 	///
@@ -156,9 +305,10 @@ fieldset[disabled] .btn-custom.active {
 				border: none;
 			}
 		.left {
-			margin-left: -45px; color: #0;
+			//margin-left: -45px; color: #0;
 		}
-		.right {margin-right: -45px; color: #0;
+		.right {
+			//margin-right: -45px; color: #0;
 		}
 
 		.glyphicon-chevron-right{

@@ -1,0 +1,51 @@
+<div>
+    <div class="container-fluid">
+        <div class="row">
+             <h1>Image search</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-search"></i></span>
+                    <input
+                            only-allowed-chars
+                            type="text" 
+                            id="searchText" 
+                            type="search" 
+                            placeholder="image search..." 
+                            ng-model="searchText" 
+                            class="form-control" 
+                            aria-describedby="sizing-addon1" 
+                            aria-label="..."
+                            ng-model="num_things" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="clear()">
+                            <i class="fa fa-times"></i>
+                        </button> 
+                    </div>
+                </div>
+            </div>
+         </div>
+          <div class="row">
+            <div class="col-md-12">
+                <h3 class="result-message">{{message}}</h3>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+                <div class="google-results" ng-if="googleImages && displayImages"  ng-model="displayImages">
+                    <div class="row">
+                        <div ng-repeat="googleImage in googleImages">
+                        
+                          <div class="col-xs-6 col-md-3">
+                            <a ng-href="{{googleImage.url}}" target="_blank" class="thumbnail">
+                              <img ng-src="{{googleImage.url}}" alt="{{googleImage.alt}}">
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

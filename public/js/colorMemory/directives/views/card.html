@@ -1,0 +1,8 @@
+﻿<div class="card" ng-class="{'true':model.flipped}" ng-click="flip(model)">
+	<div class="face front"> 
+		<div class="content"></div>
+    </div> 
+    <div class="face back" ng-style="{'background-color':model.cardColor}"> 
+        <div class="content">{{model.val}}</div>
+    </div> 
+</div>

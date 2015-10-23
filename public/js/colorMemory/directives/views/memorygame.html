@@ -1,0 +1,16 @@
+<div heading="Memory">
+    <div class="container-fluid">
+        <div class="row">
+        	 <h1>MEMORY GAME</h1>
+        </div>
+         <div class="row">
+            <div class="col-md-12">
+                <div class="memory-game" ng-controller="GameCtrl" >
+                    <board game-info="gameInfo" start-game="startGame()" >
+                        <card model="card" flip="flipCard(card)" ng-repeat="card in cards track by card.id" ng-if="gameStarted"></card>
+                    </board>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

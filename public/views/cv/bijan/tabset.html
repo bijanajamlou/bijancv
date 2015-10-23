@@ -1,0 +1,7 @@
+<div ng-if="tabs">
+  <uib-tabset justified="false">
+    <uib-tab ng-repeat="tab in tabs" heading="{{ tab.heading }}" active="tab.active">
+         <div ng-include="tab.template"></div>
+    </uib-tab>
+  </uib-tabset>
+</div>
